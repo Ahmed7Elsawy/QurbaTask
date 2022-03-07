@@ -37,24 +37,21 @@ class MainActivity : ComponentActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
       setContent {
-         QurbaTaskTheme {
-            // A surface container using the 'background' color from the theme
-//            Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-//               Greeting("Android")
-//            }
-            MainScreen()
-         }
+         MainScreen()
       }
    }
 }
 
 @Composable
 private fun MainScreen() {
-   val navController = rememberNavController()
-   Scaffold(modifier = Modifier.fillMaxSize(),
-      bottomBar = { BottomNavigationBar(navController) }
-   ) {
-      NavigationGraph(navController)
+   QurbaTaskTheme {
+
+      val navController = rememberNavController()
+      Scaffold(modifier = Modifier.fillMaxSize(),
+         bottomBar = { BottomNavigationBar(navController) }
+      ) {
+         NavigationGraph(navController)
+      }
    }
 }
 
