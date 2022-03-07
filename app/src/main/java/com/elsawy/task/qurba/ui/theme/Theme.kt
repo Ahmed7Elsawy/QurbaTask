@@ -5,6 +5,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
    primary = Purple200,
@@ -25,6 +27,15 @@ private val LightColorPalette = lightColors(
     onBackground = Color.Black,
     onSurface = Color.Black,
     */
+)
+
+//@Stable
+val qurbaTaskColors = QurbaTaskColors()
+
+class QurbaTaskColors(
+   val purple100: Color = Purple100,
+   val purple300: Color = Purple300,
+   val blue400: Color = Blue400,
 )
 
 @Composable
