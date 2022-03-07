@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import com.elsawy.task.qurba.ui.theme.qurbaTaskColors
 
 val brush = Brush.linearGradient(
-   0f to qurbaTaskColors.blue400,
+   0f to qurbaTaskColors.blue500,
    1f to qurbaTaskColors.purple300,
    start = Offset(0f, .5f)
 )

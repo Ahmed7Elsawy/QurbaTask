@@ -9,15 +9,15 @@ import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-   primary = Purple200,
-   primaryVariant = Purple700,
-   secondary = Teal200
+   primary = Color.White,
+   primaryVariant = Gray,
+   secondary = Red
 )
 
 private val LightColorPalette = lightColors(
-   primary = Purple500,
-   primaryVariant = Purple700,
-   secondary = Teal200
+   primary = Color.White,
+   primaryVariant = Gray,
+   secondary = Red
 
    /* Other default colors to override
     background = Color.White,
@@ -35,6 +35,7 @@ val qurbaTaskColors = QurbaTaskColors()
 class QurbaTaskColors(
    val purple100: Color = Purple100,
    val purple300: Color = Purple300,
+   val blue500: Color = Blue500,
    val blue400: Color = Blue400,
 )
 
