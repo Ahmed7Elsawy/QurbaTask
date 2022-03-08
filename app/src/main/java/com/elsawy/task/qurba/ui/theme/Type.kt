@@ -77,10 +77,10 @@ val Typography = Typography(
    ),
    body1 = TextStyle(
       fontFamily = Montserrat,
-      fontSize = 16.sp,
+      fontSize = 12.sp,
       fontWeight = FontWeight.Normal,
-      lineHeight = 28.sp,
-      letterSpacing = 0.15.sp
+      lineHeight = 15.sp,
+      letterSpacing = 0.20.sp
    ),
    body2 = TextStyle(
       fontFamily = Montserrat,
