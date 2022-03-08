@@ -14,7 +14,7 @@ fun HomeScreen() {
       item {
          WritePostCard()
       }
-      items(2) {
+      items(4) {
          PostCard()
       }
    }
