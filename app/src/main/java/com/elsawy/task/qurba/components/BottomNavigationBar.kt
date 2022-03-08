@@ -21,6 +21,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.elsawy.task.qurba.HomeScreen
 import com.elsawy.task.qurba.R
 import com.elsawy.task.qurba.ui.theme.QurbaTaskTheme
 
@@ -79,6 +80,7 @@ fun BottomNavigationBar(navController: NavController) {
 fun NavigationGraph(navController: NavHostController) {
    NavHost(navController = navController, startDestination = NavigationItem.Home.route) {
       composable(NavigationItem.Home.route) {
+         HomeScreen()
       }
       composable(NavigationItem.Menu.route) {
       }

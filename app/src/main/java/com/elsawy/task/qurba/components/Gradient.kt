@@ -6,11 +6,12 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
-import com.elsawy.task.qurba.ui.theme.qurbaTaskColors
+import com.elsawy.task.qurba.ui.theme.Blue500
+import com.elsawy.task.qurba.ui.theme.Purple300
 
 val brush = Brush.linearGradient(
-   0f to qurbaTaskColors.blue500,
-   1f to qurbaTaskColors.purple300,
+   0f to Blue500,
+   1f to Purple300,
    start = Offset(0f, .5f)
 )
 

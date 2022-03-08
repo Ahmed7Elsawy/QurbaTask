@@ -29,16 +29,6 @@ private val LightColorPalette = lightColors(
     */
 )
 
-//@Stable
-val qurbaTaskColors = QurbaTaskColors()
-
-class QurbaTaskColors(
-   val purple100: Color = Purple100,
-   val purple300: Color = Purple300,
-   val blue500: Color = Blue500,
-   val blue400: Color = Blue400,
-)
-
 @Composable
 fun QurbaTaskTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
    val colors = if (darkTheme) {
