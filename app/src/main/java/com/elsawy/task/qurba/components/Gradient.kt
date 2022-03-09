@@ -5,6 +5,7 @@ import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import com.elsawy.task.qurba.ui.theme.Blue500
 import com.elsawy.task.qurba.ui.theme.Purple300
@@ -13,6 +14,10 @@ val brush = Brush.linearGradient(
    0f to Blue500,
    1f to Purple300,
    start = Offset(0f, .5f)
+)
+
+val buttonBrush = Brush.horizontalGradient(
+   colors = listOf(Blue500.copy(.3f), Purple300.copy(.3f)),
 )
 
 fun Modifier.useBrush(brush: Brush) = this
