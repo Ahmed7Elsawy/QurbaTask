@@ -32,6 +32,7 @@ fun PostCard() {
       PostImages()
       PostOrderInfo()
       SmallDivider()
+      PostReactions()
    }
 }
 
