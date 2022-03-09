@@ -17,22 +17,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elsawy.task.qurba.R
+import com.elsawy.task.qurba.data.Comment
 import com.elsawy.task.qurba.ui.theme.Black
 
 @Composable
-fun Comment(
-   username: String = "Jaxson Schleifer",
-   comment: String = "Lorem ipsum ",
-   imageId: Int = R.drawable.profile_image,
-   time: String = "1h",
-   likeCounts: String = "2",
-) {
+fun CommentCard(comment: Comment) {
    Row(modifier = Modifier
       .fillMaxWidth()
       .padding(start = 16.dp, top = 12.dp, bottom = 12.dp, end = 16.dp)) {
 
       Image(
-         painter = painterResource(imageId),
+         painter = painterResource(comment.user.imageId),
          contentDescription = "profile picture",
          contentScale = ContentScale.Crop,
          modifier = Modifier
@@ -48,26 +43,26 @@ fun Comment(
             .background(Color(0x80EFF2F5))
             .padding(start = 12.dp, top = 8.dp, bottom = 8.dp, end = 18.dp)) {
             Text(
-               text = username,
+               text = comment.user.name,
                fontSize = 12.sp,
                fontWeight = FontWeight.SemiBold,
                color = Black,
             )
 
             Text(
-               text = comment,
+               text = comment.body,
                fontSize = 12.sp,
                color = Black,
             )
          }
 
-         CommentReactions(time, likeCounts)
+         CommentReactions(comment.time, comment.likesCount)
       }
    }
 }
 
 @Composable
-private fun CommentReactions(time: String, likeCounts: String) {
+private fun CommentReactions(time: String, likesCount: String) {
    Row(modifier = Modifier.padding(top = 2.dp, start = 8.dp)) {
       Text(
          text = time,
@@ -90,7 +85,7 @@ private fun CommentReactions(time: String, likeCounts: String) {
          modifier = Modifier.padding(end = 16.dp)
       )
       Text(
-         text = likeCounts,
+         text = likesCount,
          fontSize = 12.sp,
          fontWeight = FontWeight.Medium,
          color = Black,

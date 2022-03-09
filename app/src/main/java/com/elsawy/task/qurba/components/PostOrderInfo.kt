@@ -11,22 +11,23 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elsawy.task.qurba.R
+import com.elsawy.task.qurba.data.Restaurant
 import com.elsawy.task.qurba.ui.theme.Black
 
 @Composable
 fun PostOrderInfo(
-   logoId: Int = R.drawable.mac,
-   order: String = "Chicken MACDO, Carmel Sandae, Fries, Carmel Sandae, Fries",
-   companyName: String = "Mcdonald's",
-) {
+   restaurant: Restaurant ,
+   horizontalMargin: Dp = 16.dp,
+   ) {
    Row(modifier = Modifier
       .fillMaxWidth()
-      .padding(start = 16.dp, top = 12.dp, bottom = 8.dp, end = 16.dp)) {
+      .padding(start = horizontalMargin, top = 12.dp, bottom = 8.dp, end = horizontalMargin)) {
       Image(
-         painter = painterResource(logoId),
+         painter = painterResource(restaurant.logo),
          contentDescription = "Contact profile picture",
          contentScale = ContentScale.Crop,
          modifier = Modifier
@@ -36,7 +37,7 @@ fun PostOrderInfo(
 
       Column(Modifier.padding(start = 8.dp)) {
          Text(
-            text = order,
+            text = restaurant.order,
             fontSize = 14.sp,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
@@ -45,7 +46,7 @@ fun PostOrderInfo(
          )
 
          Text(
-            text = companyName,
+            text = restaurant.name,
             fontSize = 12.sp,
             color = Black,
             modifier = Modifier.padding(top = 6.dp)

@@ -8,20 +8,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.elsawy.task.qurba.R
+import com.elsawy.task.qurba.data.Reactions
 import com.elsawy.task.qurba.ui.theme.Black
 
 @Composable
-fun PostReactions(likes: String = "32K", comments: String = "597", shares: String = "12.3K") {
+fun PostReactions(
+   reactions: Reactions,
+   verticalPadding: Dp = 12.dp,
+) {
    Box(modifier = Modifier
       .fillMaxWidth()
-      .padding(horizontal = 16.dp, vertical = 7.5.dp)
+      .padding(horizontal = 16.dp, vertical = verticalPadding)
    ) {
-      Reaction(Modifier.align(Alignment.CenterStart), likes, R.drawable.ic_like)
-      Reaction(Modifier.align(Alignment.Center), comments, R.drawable.ic_comment)
-      Reaction(Modifier.align(Alignment.BottomEnd), shares, R.drawable.ic_share)
+      Reaction(Modifier.align(Alignment.CenterStart), reactions.likes, R.drawable.ic_like)
+      Reaction(Modifier.align(Alignment.Center), reactions.comments, R.drawable.ic_comment)
+      Reaction(Modifier.align(Alignment.BottomEnd), reactions.shares, R.drawable.ic_share)
    }
 }
 

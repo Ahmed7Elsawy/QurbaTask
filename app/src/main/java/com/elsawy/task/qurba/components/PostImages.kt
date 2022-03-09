@@ -12,20 +12,13 @@ import androidx.compose.ui.unit.dp
 import com.elsawy.task.qurba.R
 
 @Composable
-fun PostImages(
-   images: List<Int> = listOf(
-      R.drawable.food1,
-      R.drawable.food2,
-      R.drawable.food3,
-      R.drawable.food4),
-) {
+fun PostImages(images: List<Int>) {
 
-   if (images.size == 1)
-      OneImage(imageId = images[0])
-   else if (images.size == 2)
-      TwoImages(images = images.subList(1, 3))
-   else
-      ThreeImages(images = images.subList(1, 4))
+   when (images.size) {
+      1 -> OneImage(imageId = images[0])
+      2 -> TwoImages(images)
+      else -> ThreeImages(images)
+   }
 }
 
 
