@@ -24,7 +24,7 @@ fun PostOrderInfo(
 ) {
    Row(modifier = Modifier
       .fillMaxWidth()
-      .padding(start = 16.dp, top = 12.dp, bottom = 7.5.dp, end = 16.dp)) {
+      .padding(start = 16.dp, top = 12.dp, bottom = 8.dp, end = 16.dp)) {
       Image(
          painter = painterResource(logoId),
          contentDescription = "Contact profile picture",
