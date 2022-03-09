@@ -3,7 +3,9 @@ package com.elsawy.task.qurba
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -31,8 +33,11 @@ private fun MainScreen() {
       Scaffold(modifier = Modifier.fillMaxSize(),
          topBar = { QurbaTopAppBar() },
          bottomBar = { BottomNavigationBar(navController) }
-      ) {
-         NavigationGraph(navController)
+      ) { innerPadding ->
+         // Apply the padding globally to the whole BottomNavScreensController
+         Box(modifier = Modifier.padding(innerPadding)) {
+            NavigationGraph(navController)
+         }
       }
    }
 }
