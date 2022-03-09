@@ -31,7 +31,7 @@ fun PostCard() {
       PostCaption()
       PostImages()
       PostOrderInfo()
-
+      SmallDivider()
    }
 }
 
