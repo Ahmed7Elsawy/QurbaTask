@@ -31,7 +31,10 @@ fun PostHeader(
    isVerifiedBuyer: Boolean = false,
    groupName: String = "",
 ) {
-   ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
+   ConstraintLayout(modifier = Modifier
+      .fillMaxWidth()
+      .padding(top = 12.dp)
+   ) {
       val (imageRef, nameRef, groupRef, timeRef, menuRef, optionsRef) = createRefs()
 
       Image(

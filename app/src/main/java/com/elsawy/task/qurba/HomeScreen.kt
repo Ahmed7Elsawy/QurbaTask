@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import com.elsawy.task.qurba.components.BigDivider
 import com.elsawy.task.qurba.components.PostCard
 import com.elsawy.task.qurba.components.WritePostCard
 
@@ -13,6 +14,9 @@ fun HomeScreen() {
    LazyColumn(modifier = Modifier.fillMaxSize()) {
       item {
          WritePostCard()
+      }
+      item {
+         BigDivider()
       }
       items(4) {
          PostCard()

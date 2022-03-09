@@ -41,6 +41,7 @@ fun PostCard() {
       SmallDivider()
       Comment()
 //   }
+      BigDivider()
    }
 }
 
