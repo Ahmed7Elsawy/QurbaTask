@@ -11,9 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.elsawy.task.qurba.components.BottomNavigationBar
-import com.elsawy.task.qurba.components.NavigationGraph
-import com.elsawy.task.qurba.components.QurbaTopAppBar
+import com.elsawy.task.qurba.ui.components.BottomNavigationBar
+import com.elsawy.task.qurba.ui.components.NavigationGraph
+import com.elsawy.task.qurba.ui.components.QurbaTopAppBar
 import com.elsawy.task.qurba.ui.theme.QurbaTaskTheme
 
 class MainActivity : ComponentActivity() {

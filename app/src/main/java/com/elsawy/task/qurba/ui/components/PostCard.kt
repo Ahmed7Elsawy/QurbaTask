@@ -1,4 +1,4 @@
-package com.elsawy.task.qurba.components
+package com.elsawy.task.qurba.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*

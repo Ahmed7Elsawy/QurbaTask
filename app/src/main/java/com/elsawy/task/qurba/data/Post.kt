@@ -25,7 +25,7 @@ val posts = listOf(
    ),
    Post(
       user = users[2],
-      body = postBodies[3],
+      body = postBodies[1],
       restaurant = restaurants[1],
       reactions = reactions[1],
       comment = comments[1],

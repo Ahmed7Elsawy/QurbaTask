@@ -1,4 +1,4 @@
-package com.elsawy.task.qurba.components
+package com.elsawy.task.qurba.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

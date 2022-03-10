@@ -6,9 +6,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.elsawy.task.qurba.components.BigDivider
-import com.elsawy.task.qurba.components.PostCard
-import com.elsawy.task.qurba.components.WritePostCard
+import com.elsawy.task.qurba.ui.components.BigDivider
+import com.elsawy.task.qurba.ui.components.PostCard
+import com.elsawy.task.qurba.ui.components.WritePostCard
 import com.elsawy.task.qurba.data.Post
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

@@ -1,11 +1,10 @@
-package com.elsawy.task.qurba.components
+package com.elsawy.task.qurba.ui.components
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import com.elsawy.task.qurba.ui.theme.Blue500
 import com.elsawy.task.qurba.ui.theme.Purple300

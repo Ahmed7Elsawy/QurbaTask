@@ -14,5 +14,5 @@ val postBodies = arrayOf(
       images = listOf(R.drawable.food2, R.drawable.food3, R.drawable.food4)),
 
    PostBody(caption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eros est, blandit eu nunc sit amet",
-      images = listOf(R.drawable.food2))
+      images = listOf())
 )

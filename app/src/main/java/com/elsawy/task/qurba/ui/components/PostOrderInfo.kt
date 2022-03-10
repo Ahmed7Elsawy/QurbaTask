@@ -1,4 +1,4 @@
-package com.elsawy.task.qurba.components
+package com.elsawy.task.qurba.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -14,7 +14,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.elsawy.task.qurba.R
 import com.elsawy.task.qurba.data.Restaurant
 import com.elsawy.task.qurba.ui.theme.Black
 
