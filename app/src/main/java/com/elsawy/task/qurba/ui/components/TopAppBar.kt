@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
@@ -25,34 +26,41 @@ import com.elsawy.task.qurba.R
 fun QurbaTopAppBar() {
    TopAppBar(
       title = {
-         Icon(painter = painterResource(id = R.drawable.logo),
+         Icon(
+            painter = painterResource(id = R.drawable.logo),
             modifier = Modifier.useBrush(brush),
-            contentDescription = "LOGO")
+            contentDescription = "LOGO"
+         )
       },
       actions = {
 
          IconButton(onClick = { }) {
-            Icon(Icons.Filled.Search,
+            Icon(
+               Icons.Filled.Search,
                modifier = Modifier.useBrush(brush),
-               contentDescription = "search")
+               contentDescription = "search"
+            )
          }
 
          IconButton(onClick = { }) {
-            ActionWithBadge(imageVector = Icons.Filled.Notifications,
+            ActionWithBadge(
+               imageVector = Icons.Filled.Notifications,
                description = "Notifications",
-               alignment = Alignment.BottomEnd)
+               alignment = Alignment.BottomEnd
+            )
          }
 
          IconButton(onClick = { }) {
             ActionWithBadge(
                imageVector = Icons.Filled.ShoppingCart,
                description = "Shopping Cart",
-               alignment = Alignment.TopEnd)
+               alignment = Alignment.TopEnd
+            )
          }
       },
       backgroundColor = MaterialTheme.colors.primary,
       contentColor = Color.White,
-      elevation = 10.dp
+      elevation = 2.dp,
    )
 }
 
@@ -64,9 +72,11 @@ private fun ActionWithBadge(
    isBadgeVisible: Boolean = true,
 ) {
    Box {
-      Icon(imageVector,
+      Icon(
+         imageVector,
          modifier = Modifier.useBrush(brush),
-         contentDescription = description)
+         contentDescription = description
+      )
       if (isBadgeVisible) {
          Box(
             modifier = Modifier
