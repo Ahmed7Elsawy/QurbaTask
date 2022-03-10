@@ -12,13 +12,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.SubcomposeLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.elsawy.task.qurba.R
 import com.elsawy.task.qurba.data.PostType
 import com.elsawy.task.qurba.data.User
@@ -36,9 +39,10 @@ fun PostHeader(
    paddingTop: Dp = 12.dp,
    notShared: Boolean = true,
 ) {
-   ConstraintLayout(modifier = Modifier
-      .fillMaxWidth()
-      .padding(top = paddingTop)
+   ConstraintLayout(
+      modifier = Modifier
+         .fillMaxWidth()
+         .padding(top = paddingTop)
    ) {
       val (imageRef, nameRef, groupRef, timeRef, menuRef, optionsRef) = createRefs()
 
@@ -74,11 +78,11 @@ fun PostHeader(
             fontWeight = FontWeight.Bold,
             color = Black,
             modifier = Modifier
-               .fillMaxWidth()
                .constrainAs(groupRef) {
                   top.linkTo(nameRef.top)
                   start.linkTo(menuRef.end)
-//                  end.linkTo(optionsRef.start, margin = 8.dp)
+                  end.linkTo(optionsRef.start, margin = 8.dp)
+                  width = Dimension.fillToConstraints
                }
          )
       }
@@ -132,24 +136,21 @@ fun PostHeader(
 
 @Composable
 private fun BuyerIcon(modifier: Modifier) {
-   Icon(painter = painterResource(R.drawable.ic_verified),
+   Icon(
+      painter = painterResource(R.drawable.ic_verified),
       contentDescription = "user icon",
       modifier = Modifier
          .size(18.dp)
          .clip(CircleShape)
          .background(brush)
-//         .padding( 0.dp else 4.dp)
          .then(modifier)
-//         .constrainAs(menuRef) {
-//            top.linkTo(nameRef.top)
-//            start.linkTo(nameRef.end, margin = 8.dp)
-//         }
    )
 }
 
 @Composable
 private fun RestaurantIcon(modifier: Modifier) {
-   Icon(painter = painterResource(R.drawable.ic_menu),
+   Icon(
+      painter = painterResource(R.drawable.ic_menu),
       contentDescription = "restaurant icon",
       modifier = Modifier
          .size(18.dp)
@@ -162,20 +163,14 @@ private fun RestaurantIcon(modifier: Modifier) {
 }
 
 @Composable
-private fun ArrowIcon(
-   modifier: Modifier,
-//   menuRef: ConstrainedLayoutReference,
-//   nameRef: ConstrainedLayoutReference,
-) {
-   Icon(painter = painterResource(R.drawable.ic_arrow),
+private fun ArrowIcon(modifier: Modifier) {
+   Icon(
+      painter = painterResource(R.drawable.ic_arrow),
       contentDescription = "arrow",
       modifier = Modifier
          .size(28.dp)
          .useBrush(brush)
          .then(modifier)
-//         .constrainAs(menuRef) {
-//            start.linkTo(nameRef.end)
-//         }
    )
 }
 
